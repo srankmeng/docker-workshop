@@ -1,0 +1,70 @@
+version: "3.5"
+services:
+  nginx01:
+    image: srank123/nginx
+    # container_name: my_nginx
+    ports:
+      - 8080:80
+    depends_on:
+      - json_server
+      - nginx02
+  nginx02:
+    image: nginx:1.25.3
+    ports:
+      - 8081:80
+  json_server:
+    image: my_json_images:1.0.0
+    # container_name: my_json_server
+    build:
+      context: ./json-server
+      dockerfile: ./Dockerfile
+    ports:
+      - 3002:3000
+  mb:
+    image: my_mb_images:1.0.0
+    build:
+      context: ./mb
+      dockerfile: ./Dockerfile
+    command: --configfile ./imposters/imposters.ejs --allowInjection
+    ports:
+      - 2525:2525
+      - 8090:8090
+  postgres:
+    image: postgres:13.7
+    environment:
+      POSTGRES_DB: test
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    ports:
+      - 5433:5432
+  newman:
+    image: my_newman_images:1.0.0
+    build:
+      context: ./newman
+      dockerfile: ./Dockerfile
+    command: |
+      run docker.postman_collection.json
+      -e docker.postman_environment.json
+      -r cli,htmlextra --reporter-htmlextra-export reports/report.html
+      --env-var "HOST=host.docker.internal:8090"
+    depends_on:
+      - mb
+    volumes:
+      - ./newman/reports:/etc/newman/reports
+
+  newman02:
+    image: my_newman_images:1.0.0
+    build:
+      context: ./newman
+      dockerfile: ./Dockerfile
+    command: |
+      run docker.postman_collection.json
+      -e docker.postman_environment.json
+      -r cli,htmlextra --reporter-htmlextra-export reports/report.html
+      --env-var "HOST=host.docker.internal:8091"
+    depends_on:
+      - mb
+    volumes:
+      - ./newman/reports:/etc/newman/reports
+      
+

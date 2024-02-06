@@ -1,0 +1,147 @@
+{
+    "port": 8090,
+    "protocol": "http",
+    "stubs": [
+      {
+        "predicates": [
+          { "equals": { "method": "GET" } },
+          {
+            "equals": {
+              "path": "/api/v1/products"
+            }
+          }
+        ],
+        "responses": [
+          {
+            "is": {
+              "statusCode": 200,
+              "headers": { "Content-Type": "application/json" },
+              "body": [
+                {
+                  "vendorCode": "B000122578",
+                  "vendorNameLoc": "นาย (ยกเลิก)วรกฤต ล้านกันทา ",
+                  "vendorNameEng": ""
+                },
+                {
+                  "vendorCode": "2000040922",
+                  "vendorNameLoc": "นาย ประสาน แสงสุวรรณ ",
+                  "vendorNameEng": ""
+                },
+                {
+                  "vendorCode": "2000087103",
+                  "vendorNameLoc": "บจ. คิวเอ็มพี ",
+                  "vendorNameEng": ""
+                },
+                {
+                  "vendorCode": "2000211006",
+                  "vendorNameLoc": "บจ. หมูกระปุก อินเตอร์ฟู้ด ",
+                  "vendorNameEng": ""
+                },
+                {
+                  "vendorCode": "2000300132",
+                  "vendorNameLoc": "บจ. เบทาโกรเกษตรอุตสาหกรรม ",
+                  "vendorNameEng": ""
+                },
+                {
+                  "vendorCode": "2000305943",
+                  "vendorNameLoc": "บจ. เบทาโกร เซฟตี้ มีท แพคกิ้ง ",
+                  "vendorNameEng": ""
+                },
+                {
+                  "vendorCode": "2000310253",
+                  "vendorNameLoc": "บจ. ไฮโดร แฟมิลี่ ",
+                  "vendorNameEng": ""
+                },
+                {
+                  "vendorCode": "2000321695",
+                  "vendorNameLoc": "บจ. มีทโปรดักท์เทรดดิ้ง ",
+                  "vendorNameEng": ""
+                },
+                {
+                  "vendorCode": "200090525",
+                  "vendorNameLoc": " น.ส.วิไลวรรณ ใจโปร่ง",
+                  "vendorNameEng": ""
+                },
+                {
+                  "vendorCode": "B000000583",
+                  "vendorNameLoc": "บจ. (ยกเลิก)เฟรชมีทโพรเซสซิ่ง ",
+                  "vendorNameEng": ""
+                },
+                {
+                  "vendorCode": "B000083467",
+                  "vendorNameLoc": "นาย (ยกเลิก)กิจพิพัฒน์ ทองใบ ",
+                  "vendorNameEng": ""
+                },
+                {
+                  "vendorCode": "B000086159",
+                  "vendorNameLoc": "นาย (ยกเลิก)กู้ชัย กุลตั้งวัฒนา ",
+                  "vendorNameEng": ""
+                },
+                {
+                  "vendorCode": "B000090525",
+                  "vendorNameLoc": "นางสาว (ยกเลิก)วิไลวรรณ ใจโปร่ง ",
+                  "vendorNameEng": ""
+                },
+                {
+                  "vendorCode": "B000096025",
+                  "vendorNameLoc": "นางสาว (ยกเลิก)เบ็ญจวรรณ ศรีหิรัญ ",
+                  "vendorNameEng": ""
+                },
+                {
+                  "vendorCode": "B000105118",
+                  "vendorNameLoc": "บจ. (ยกเลิก)วี แอนด์ พี เฟร็ชฟูดส์ ",
+                  "vendorNameEng": ""
+                },
+                {
+                  "vendorCode": "B000111340",
+                  "vendorNameLoc": "นาย (ยกเลิก)ชิดชัย ปรีชาบุญฤทธิ์ ",
+                  "vendorNameEng": ""
+                },
+                {
+                  "vendorCode": "B000116416",
+                  "vendorNameLoc": "บจ. (ยกเลิก)เอ แอนด์ เอ มีท ฟูด โปรดักส ์",
+                  "vendorNameEng": ""
+                },
+                {
+                  "vendorCode": "1242000300",
+                  "vendorNameLoc": "บจ. ซีพีเอฟ เทรดดิ้ง (FO-โรงงานหมูแปดริ้ว 1)",
+                  "vendorNameEng": ""
+                },
+                {
+                  "vendorCode": "1242118300",
+                  "vendorNameLoc": "บจ. ซีพีเอฟ เทรดดิ้ง (CC Pork Shop คลองหลวง)",
+                  "vendorNameEng": ""
+                },
+                {
+                  "vendorCode": "1333203400",
+                  "vendorNameLoc": "บมจ. ซีพีเอฟ (ประเทศไทย) (ครบวงจร-ภาคเหนือ)",
+                  "vendorNameEng": ""
+                },
+                {
+                  "vendorCode": "1333203700",
+                  "vendorNameLoc": "บมจ. ซีพีเอฟ (ประเทศไทย) (ครบวงจร-ภาคตะวันออก)",
+                  "vendorNameEng": ""
+                },
+                {
+                  "vendorCode": "1333216400",
+                  "vendorNameLoc": "บมจ. ซีพีเอฟ (ประเทศไทย) (ควจ.ธ.ผลิต โคกตูม)",
+                  "vendorNameEng": ""
+                },
+                {
+                  "vendorCode": "1333230900",
+                  "vendorNameLoc": "บมจ. ซีพีเอฟ (ประเทศไทย) (สุกร-ฟ.บ่อทอง)",
+                  "vendorNameEng": ""
+                },
+                {
+                  "vendorCode": "1333257000",
+                  "vendorNameLoc": "บมจ. ซีพีเอฟ (ประเทศไทย) (รง.แปรรูปสุกร กาญจนบุรี)",
+                  "vendorNameEng": ""
+                }
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  }
+  
